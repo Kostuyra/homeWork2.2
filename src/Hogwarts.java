@@ -37,9 +37,9 @@ class Hogwarts {
 		return "Name: " + getName() + ", Wizard Power:" + getWizardPower() + ", Apparition Distance: " + getApparitionDistance();
 	}
 
-	public static void comparisonHogwartsCharacters(Object student, Object student2) {
-		if (Hogwarts.class.isAssignableFrom(student.getClass()) && Hogwarts.class.isAssignableFrom(student2.getClass())) {
-			Hogwarts s1 = ((Hogwarts) student);
+	public void comparisonHogwartsCharacters(Object student2) {
+		if (Hogwarts.class.isAssignableFrom(student2.getClass())) {
+			Hogwarts s1 = this;
 			Hogwarts s2 = ((Hogwarts) student2);
 			int wizPower1 = s1.getWizardPower();
 			int wizPower2 = s2.getWizardPower();

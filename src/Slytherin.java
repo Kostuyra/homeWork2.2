@@ -61,21 +61,21 @@ public class Slytherin extends Hogwarts {
 				", resourcefulness=" + resourcefulness +
 				", lustForPower=" + lustForPower;
 	}
-	public static void comparisonStudents(Slytherin s1, Slytherin s2){
-		int sumStudent1 = sumCharacters(s1);
-		int sumStudent2 = sumCharacters(s2);
+	public void comparisonStudents(Slytherin s2){
+		int sumStudent1 = this.sumCharacters();
+		int sumStudent2 = s2.sumCharacters();
 
 		if (sumStudent1 > sumStudent2){
-			System.out.println(s1.getName() + " лучший слизеринец, чем " + s2.getName());
+			System.out.println(this.getName() + " лучший слизеринец, чем " + s2.getName());
 		} else 	if (sumStudent1 < sumStudent2) {
-			System.out.println(s2.getName() + " лучший слизеринец, чем " + s1.getName());
+			System.out.println(s2.getName() + " лучший слизеринец, чем " + this.getName());
 		} else {
-			System.out.println("Студенты " + s1.getName() + " и " + s2.getName()+ " одинаковые слизеринцы");
+			System.out.println("Студенты " + this.getName() + " и " + s2.getName()+ " одинаковые слизеринцы");
 		}
 
 	}
-	private static int sumCharacters(Slytherin student){
-		return student.getCunning()+ student.getDetermination()+ student.getAmbition() + student.getLustForPower()+ student.getResourcefulness();
+	private  int sumCharacters(){
+		return this.getCunning()+ this.getDetermination()+ this.getAmbition() + this.getLustForPower()+ this.getResourcefulness();
 	}
 }
 

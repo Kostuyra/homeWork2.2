@@ -12,14 +12,20 @@ public class Main {
 		Slytherin grahamMontague = new Slytherin("Graham Montague", 88, 250, 60, 76, 77, 88, 66);
 		Slytherin gregoryGoyle = new Slytherin("Gregory Goyle", 40, 100, 56, 62, 77, 59, 66);
 
-		Ravenclaw choChang = new Ravenclaw("Cho Chang", 73, 100, 62, 56, 77, 54);
+		Ravenclaw choChang = new Ravenclaw("Cho Chang", 73, 100, 77, 82, 52, 54);
 		Ravenclaw padmaPatil = new Ravenclaw("Padma Patil,", 77, 92, 70, 84, 72, 90);
 		Ravenclaw marcusBelby = new Ravenclaw("Marcus Belby", 68, 125, 70, 73, 80, 77);
 
 
-		Hogwarts.comparisonHogwartsCharacters(dracoMalfoy, harryPotter);
-		Hogwarts.comparisonHogwartsCharacters(grahamMontague, choChang);
-		Hufflepuff.comparisonStudents(zachariasSmith, cedricDiggory);
+		dracoMalfoy.comparisonHogwartsCharacters(harryPotter);
+		harryPotter.comparisonHogwartsCharacters(dracoMalfoy);
+		grahamMontague.comparisonHogwartsCharacters(choChang);
+		choChang.comparisonHogwartsCharacters(grahamMontague);
+		zachariasSmith.comparisonStudents(cedricDiggory);
+		cedricDiggory.comparisonStudents(zachariasSmith);
+		choChang.comparisonStudents(padmaPatil);
+		padmaPatil.comparisonStudents(choChang);
 		System.out.println(harryPotter.fullCharacters());
+		hermioneGranger.comparisonStudents(ronWeasley);
 	}
 }

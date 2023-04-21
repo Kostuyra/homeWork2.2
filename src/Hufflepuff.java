@@ -39,19 +39,19 @@ public class Hufflepuff extends Hogwarts{
 				", loyalty=" + loyalty +
 				", fairness=" + fairness ;
 	}
-	public static void comparisonStudents(Hufflepuff s1, Hufflepuff s2){
-		int sumStudent1 = sumCharacters(s1);
-		int sumStudent2 = sumCharacters(s2);
+	public void comparisonStudents(Hufflepuff s2){
+		int sumStudent1 = this.sumCharacters();
+		int sumStudent2 = s2.sumCharacters();
 
 		if (sumStudent1 > sumStudent2){
-			System.out.println(s1.getName() + " лучший Пуффендуец, чем " + s2.getName());
+			System.out.println(this.getName() + " лучший Пуффендуец, чем " + s2.getName());
 		} else if (sumStudent1 < sumStudent2) {
-			System.out.println(s2.getName() + " лучший Пуффендуец, чем " + s1.getName());
+			System.out.println(s2.getName() + " лучший Пуффендуец, чем " + this.getName());
 		} else {
-			System.out.println("Студенты " + s1.getName() + " и " + s2.getName()+ " одинаковые Пуффендуйцы");
+			System.out.println("Студенты " + this.getName() + " и " + s2.getName()+ " одинаковые Пуффендуйцы");
 		}
 	}
-	private static int sumCharacters(Hufflepuff student){
-		return student.getLoyalty()+ student.getFairness() + student.getHardWorking();
+	private int sumCharacters(){
+		return this.getLoyalty()+ this.getFairness() + this.getHardWorking();
 	}
 }
